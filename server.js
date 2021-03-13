@@ -5,7 +5,7 @@ app.use(express.static(__dirname + "/dist"));
 
 var port = 3000
 
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
     res.send(path.join(__dirname, "./dist/index.html"));
 });
 
