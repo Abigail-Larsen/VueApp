@@ -1,10 +1,14 @@
 var express = require("express");
 var app = (module.exports = express());
 
-app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./build/index.html"));
-  });
+app.use(express.static(__dirname + "/dist"));
+// app.use(bodyParser.json());
+var port = 3000
 
-  app.listen(port, function() {
+app.get("*", function(req, res) {
+    res.send(path.join(__dirname, "./dist/index.html"));
+});
+
+app.listen(port, function() {
     console.log("App is up and running");
-  });
+});
