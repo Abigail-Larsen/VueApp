@@ -1,25 +1,42 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-app-bar
+      app
+      color="purple"
+      dark
+    >
+      <v-toolbar-title>Abigail Thelin - Vue3-Todo-App</v-toolbar-title>
+    </v-app-bar>
+
+    <v-content>
+      <v-container fluid>
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <todo-list></todo-list>
+        </v-row>
+      </v-container>
+    </v-content>
+
+    <v-footer
+      app
+      color="purple"
+    >
+      <v-spacer></v-spacer>
+    </v-footer>
+  </v-app>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import Vue from 'vue';
+import TodoList from './components/TodoList.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    TodoList,
+  },
+};
+</script>
