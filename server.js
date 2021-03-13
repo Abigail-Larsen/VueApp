@@ -2,7 +2,7 @@ var express = require("express");
 var app = (module.exports = express());
 
 app.use(express.static(__dirname + "/dist"));
-// app.use(bodyParser.json());
+
 var port = 3000
 
 app.get("*", function(req, res) {
