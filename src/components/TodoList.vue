@@ -54,28 +54,6 @@
         />
       </v-col>
     </v-row>
-
-    <v-bottom-navigation
-      v-if="hasTodo"
-      v-model="view"
-      color="purple lighten-1"
-      class="mt-2"
-    >
-      <v-btn dark>
-        <span>All</span>
-        <v-icon>mdi-apps</v-icon>
-      </v-btn>
-
-      <v-btn dark>
-        <span>Active</span>
-        <v-icon>mdi-history</v-icon>
-      </v-btn>
-
-      <v-btn dark>
-        <span>Completed</span>
-        <v-icon>mdi-check-circle-outline</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
   </v-container>
 </template>
 

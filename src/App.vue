@@ -29,7 +29,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import TodoList from './components/TodoList.vue';
 
 export default {
